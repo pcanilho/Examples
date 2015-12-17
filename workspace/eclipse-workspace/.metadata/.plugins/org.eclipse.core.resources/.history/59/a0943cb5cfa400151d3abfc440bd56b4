@@ -1,0 +1,12 @@
+#!/usr/bin/perl
+
+package Example;
+
+sub add{
+	
+	
+}
+
+sub asub {
+	
+}

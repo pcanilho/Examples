@@ -1,0 +1,36 @@
+#!usr/local/bin/perl
+
+# Print Menu
+print_menu();
+
+# Get user input
+get_usr_input();
+
+# Subroutines
+sub get_usr_input {
+	printf("input> ");
+	$result = <STDIN>;
+	chomp $result;
+	if ( $result == "1" ) {
+		printf("Help is coming soon!");
+	}
+	else {
+		printf("Wrong input.\n");
+		get_usr_input();
+	}
+}
+
+sub print_menu {
+	printf("\n");
+	printf("##########################################\n");
+	printf("############ PERL INPUT TEST #############\n");
+	printf("##########################################\n");
+	printf("#### COMMANDS                         ####\n");
+	printf("####                                  ####\n");
+	printf("#### 1)Main menu                      ####\n");
+	printf("#### 2)Help                           ####\n");
+	printf("#### 3)User                           ####\n");
+	printf("#### 4)C++ Examples                   ####\n");
+	printf("#### 5)Exit                           ####\n");
+	printf("##########################################\n");
+}

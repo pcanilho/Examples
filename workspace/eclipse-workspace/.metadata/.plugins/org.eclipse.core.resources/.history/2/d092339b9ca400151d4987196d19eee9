@@ -1,0 +1,67 @@
+package ch.cern.cs.input;
+
+import java.util.Scanner;
+
+public class InputTest {
+	public static void main(String[] args) {
+		// Print menu
+		printMenu();
+
+		// Input
+		readUserInput();
+	}
+
+	public static void readUserInput() {
+		Scanner scanner = null;
+		try {
+			// Init Input
+			System.out.print("input> ");
+			scanner = new Scanner(System.in);
+			String inp = scanner.next();
+			switch (inp) {
+			case "1":
+				System.out.println("Help is coming soon!");
+				readUserInput();
+				break;
+			case "2":
+				System.out.println("Current user: " + System.getProperty("user.name"));
+				readUserInput();
+				break;
+			case "3":
+				System.err.println("Terminatting...\nAre you sure you want to quit? y/n\ninput> ");
+				String answer = scanner.next();
+				if (answer == "y" || answer == "Y") {
+					System.out.println("Exiting...");
+					System.exit(0);
+				} else
+					readUserInput();
+				break;
+
+			default:
+				System.out.println("\nWrong input.\n");
+				readUserInput();
+				break;
+			}
+
+		} catch (Exception e) {
+			System.err.println("Exception.");
+			System.exit(1);
+		} finally {
+			scanner.close();
+		}
+	}
+
+	private static void printMenu() {
+		System.out.println("\n");
+		System.out.println("##########################################");
+		System.out.println("############### INPUT TEST ###############");
+		System.out.println("##########################################");
+		System.out.println("#### COMMANDS                         ####");
+		System.out.println("####                                  ####");
+		System.out.println("#### 1)Help                           ####");
+		System.out.println("#### 2)User                           ####");
+		System.out.println("#### 3)Exit                           ####");
+		System.out.println("##########################################");
+
+	}
+}

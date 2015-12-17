@@ -1,0 +1,5 @@
+package ch.cern.cs.input;
+
+public class InputTest {
+
+}

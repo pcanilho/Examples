@@ -1,0 +1,21 @@
+#include "includes.h"
+class Examples {
+
+public:
+
+	int add() {
+		int x = random() + 10;
+		int y = random() + 10;
+		printf("%s %d", "x: ", x);
+		printf("%s %d", "y: ", y);
+		return x + y;
+	}
+
+	int sub() {
+		int x = random() + 10;
+		int y = random() + 10;
+		printf("%s %d", "x: ", x);
+				printf("%s %d", "y: ", y);
+		return x - y;
+	}
+};

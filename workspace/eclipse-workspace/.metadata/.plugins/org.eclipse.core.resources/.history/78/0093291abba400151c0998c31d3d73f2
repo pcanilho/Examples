@@ -1,0 +1,19 @@
+#include "includes.h"
+class Examples {
+
+public:
+
+	int add() {
+		int x = random() + 10;
+		int y = random() + 10;
+		printf("%s %d", "x: " , &x);
+		return x + y;
+	}
+
+	int sub() {
+		int x = random() + 10;
+		int y = random() + 10;
+		printf("x: " + x + "\ny: " + y);
+		return x - y;
+	}
+};
